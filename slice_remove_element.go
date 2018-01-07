@@ -1,0 +1,16 @@
+package main
+
+import (
+	"fmt"
+)
+
+func remove(slice []int, i int) []int {
+	copy(slice[i:], slice[i+1:])
+	//return slice[:len(slice)-1]//[5 6 8 9]
+	return slice //[5 6 8 9 9]
+}
+
+func main() {
+	s := []int{5, 6, 7, 8, 9}
+	fmt.Println(remove(s, 2))
+}
